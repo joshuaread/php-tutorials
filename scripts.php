@@ -53,11 +53,51 @@ if ($name == 'Joshua') {
 } else {
 	echo 'NOT TRUE.';
 }
+	
+echo "</div><div>";	
 
 if ($age == 39) {
 	echo 'TRUE.';
 } else {
 	echo 'NOT TRUE.';
 }
+	
+echo "</div><div>";	
+
+$age;
+$status = false;
+
+if ($age >= 21) {
+	$status = true;
+}
+
+if ($status == true) {
+	echo "You're allowed.";
+} else {
+	echo "You're NOT allowed.";
+}
+	
+echo "</div><div>";	
+
+/* TRIPLE EQUALS */
+$number = 10;
+$number2 = '10';
+
+if ($number == $number2) {
+	echo 'Equal';
+} else {
+	echo 'Not Equal';
+} /* returns EQUAL despite one being a float and the other a string. */
+	
+echo "</div><div>";	
+
+/* with triple equal we compare data types as well */
+if ($number === $number2) {
+	echo 'Equal';
+} else {
+	echo 'Not Equal';
+} /* returns NOT EQUAL because the data types are not the same. */
+	
+echo "</div><div>";	
 
 ?>

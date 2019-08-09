@@ -29,6 +29,21 @@ if ($age >= 21) {
 	echo "You're not old enough to drink yet.";
 }
 	
-/* Arithmetic Operators */
+echo "</div><div>";	
 	
+/* Arithmetic Operators */
+$num1 = 10;
+$num2 = 2;
+
+/* you can use: + - * / % ++ -- */
+$result = ($num1 * $num2) / 2;
+
+echo $result;
+	
+echo "</div><div>";	
+
+/* Comparison Operators */
+/* == != > < >= <= */
+
+
 ?>

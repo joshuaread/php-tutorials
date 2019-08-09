@@ -57,6 +57,6 @@ function level_data( $level, $data ) {
 // echo level_data( 3, 'desc');
 
 echo '<pre>', print_r($GLOBALS, true), '</pre>';
-
+// Outputs tons of information - Really useful.
 
 ?>

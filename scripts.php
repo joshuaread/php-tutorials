@@ -45,5 +45,19 @@ echo "</div><div>";
 /* Comparison Operators */
 /* == != > < >= <= */
 
+$name = 'Joshua';
+$age = '41';
+
+if ($name == 'Joshua') {
+	echo 'TRUE.';
+} else {
+	echo 'NOT TRUE.';
+}
+
+if ($age == 39) {
+	echo 'TRUE.';
+} else {
+	echo 'NOT TRUE.';
+}
 
 ?>

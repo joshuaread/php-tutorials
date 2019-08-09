@@ -170,6 +170,81 @@ echo $names['Alex']['Food'][0];
 echo "</div><div>";	
 
 /* While Loop */
+$num = 3;
+while ($num >= 0) {
+	echo $num.'<br>';
+	$num--;
+}
+/* Additional way to write, does the exact same thing
+	remove the curly brackets. 
+	Replace beginning curly bracket with a colon 
+	Replace ending curly bracket with an "endwhile" */
+$num = 3;
+while ($num >= 0) :
+	echo $num.'<br>';
+	$num--;
+endwhile;
+	
+echo "</div><div>";	
+
+/* Do While Loop */
+$num = 1;
+do {
+	echo $num . '<br>';
+	$num++;
+} while ($num<=3);
+	
+echo "</div><div>";	
+
+/* For Loop */
+for (
+	$num=1; // Assignment of our variable
+	$num<=3; // Condition our variable must meet
+	$num++ // action our variable takes after the loop runs.
+	) {
+	echo $num . '<br>';
+}
+	
+echo "</div><div>";	
+
+/* For Each Loop */
+$names = array('Alex'=>21, 'Billy'=>16, 'Dale'=>49);
+
+foreach ($names as $key => $age) { // NOTE: we somehow define $key to equal the first value in the array and $age as the second value 
+	echo $key . ' is ' . $age . '<br>';
+}
+/* Output is: Alex is 21, Billy is 16, Dale is 49. */
+
+
+	
+echo "</div><div>";	
+
+/* FUNCTIONS */
+function name($name, $age) {
+	return 'My name is ' . $name . ' and my age is ' . $age;
+}
+$returnvalue = name('Joshua', 41);
+echo $returnvalue;
+
+	
+echo "</div><div>";	
+
+function add($num1, $num2) {
+	$result = $num1 + $num2;
+	return $result;
+}
+
+echo add(10, 1000);
+
+	
+echo "</div><div>";	
+
+
+
+
+
+
+
 
 
 

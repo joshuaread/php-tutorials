@@ -251,10 +251,10 @@ $age = $_GET['age'];
 if ( isset($name) && isset($age) ) {
 		if ( !empty($name) && !empty($age) ) {
 			echo 'I am ' . $name . ' and I am ' . $age . ' years old.';
-		}
-	} else {
+		} else {
 		echo 'Nothing has been entered.';
 	}
+}
 
 	
 echo "</div><hr /><div>";	
@@ -267,7 +267,12 @@ Please enter your password:<br>
 </form>";
 $password = 'password';
 if ( isset($_POST['password']) && !empty($_POST['password'])) {
-	echo 'submitted and filled.';
+	$password_post = $_POST['password'];
+	if ($password_post == $password) {
+		echo "Correct";
+	} else {
+		echo "Incorrect";
+	}
 }
 
 

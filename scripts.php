@@ -8,7 +8,7 @@ $age = 41;
 
 echo 'My name is ' . $name . ' and I am ' . $age . ' years old.';
 
-echo "</div><div>";
+echo "</div><hr /><div>";
 
 /* IF Statements */
 $password = 'password';
@@ -18,7 +18,7 @@ if ($password == 'alex') {
 	echo 'This is the wrong password.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 $age = 18;
 if ($age >= 21) {
@@ -29,7 +29,7 @@ if ($age >= 21) {
 	echo "You're not old enough to drink yet.";
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 	
 /* Arithmetic Operators */
 $num1 = 10;
@@ -40,7 +40,7 @@ $result = ($num1 * $num2) / 2;
 
 echo $result;
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* Comparison Operators */
 /* == != > < >= <= */
@@ -54,7 +54,7 @@ if ($name == 'Joshua') {
 	echo 'NOT TRUE.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 if ($age == 39) {
 	echo 'TRUE.';
@@ -62,7 +62,7 @@ if ($age == 39) {
 	echo 'NOT TRUE.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 $age;
 $status = false;
@@ -77,7 +77,7 @@ if ($status == true) {
 	echo "You're NOT allowed.";
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* TRIPLE EQUALS */
 $number = 10;
@@ -89,7 +89,7 @@ if ($number == $number2) {
 	echo 'Not Equal';
 } /* returns EQUAL despite one being a float and the other a string. */
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* with triple equal we compare data types as well */
 if ($number === $number2) {
@@ -98,7 +98,7 @@ if ($number === $number2) {
 	echo 'Not Equal';
 } /* returns NOT EQUAL because the data types are not the same. */
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* LOGICAL OPERATORS */
 /*
@@ -117,7 +117,7 @@ if ($num >= 1 && $num <= 100) {
 	echo 'Number must be between 1 and 100, inclusive.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 $name = 'Joshua';
 $age = 41;
@@ -127,7 +127,7 @@ if ( ($name == 'Joshua' || $name == 'Alex') && ($age == 25 || $age == 31) ) {
 	echo 'Go away.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* SWITCH STATEMENT */
 $num = 10;
@@ -146,13 +146,13 @@ switch ($num) {
 		echo 'Number not recognised.';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* Arrays */
 $names = 'Alex (21), Billy (16), Dale (49)';
 echo $names;
 
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 /* Key Value Pairs i.e. 'Alex' = Key and VALUE = =>21 */
 // $names = array('Alex'=>21, 'Billy'=>33, 'Dale'=>49);
 // echo $names['Dale'];
@@ -167,7 +167,7 @@ echo $names['Alex']['Food'][0];
 /* outputs "PIZZA" */
 
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* While Loop */
 $num = 3;
@@ -185,7 +185,7 @@ while ($num >= 0) :
 	$num--;
 endwhile;
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* Do While Loop */
 $num = 1;
@@ -194,7 +194,7 @@ do {
 	$num++;
 } while ($num<=3);
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* For Loop */
 for (
@@ -205,7 +205,7 @@ for (
 	echo $num . '<br>';
 }
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* For Each Loop */
 $names = array('Alex'=>21, 'Billy'=>16, 'Dale'=>49);
@@ -217,7 +217,7 @@ foreach ($names as $key => $age) { // NOTE: we somehow define $key to equal the 
 
 
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 /* FUNCTIONS */
 function name($name, $age) {
@@ -227,7 +227,7 @@ $returnvalue = name('Joshua', 41);
 echo $returnvalue;
 
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
 function add($num1, $num2) {
 	$result = $num1 + $num2;
@@ -237,9 +237,24 @@ function add($num1, $num2) {
 echo add(10, 1000);
 
 	
-echo "</div><div>";	
+echo "</div><hr /><div>";	
 
+/* $_GET */
+echo "<form action='scripts.php' method='GET'>
+Name: <br><input type='text' name='name'><br>
+Age: <br><input type='text' name='age' size='5'><br><br>
+<input type='submit' value='Submit'>
+</form>";
+$name = $_GET['name'];
+$age = $_GET['age'];
 
+if (isset($name) && isset($age)) {
+	if (!empty($name) && !empty($age)) {
+		echo 'I am ' . $name . ' and I am ' . $age . ' years old.';
+	} else {
+		echo 'Nothing has been entered.';
+	}
+}
 
 
 

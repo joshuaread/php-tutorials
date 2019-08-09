@@ -248,14 +248,27 @@ Age: <br><input type='text' name='age' size='5'><br><br>
 $name = $_GET['name'];
 $age = $_GET['age'];
 
-if (isset($name) && isset($age)) {
-	if (!empty($name) && !empty($age)) {
-		echo 'I am ' . $name . ' and I am ' . $age . ' years old.';
+if ( isset($name) && isset($age) ) {
+		if ( !empty($name) && !empty($age) ) {
+			echo 'I am ' . $name . ' and I am ' . $age . ' years old.';
+		}
 	} else {
 		echo 'Nothing has been entered.';
 	}
-}
 
+	
+echo "</div><hr /><div>";	
+
+/* $_POST */
+echo "<form action='scripts.php' method='POST'>
+Please enter your password:<br>
+<input type='password' name='password'><br>
+<input type='submit' value='Submit'>
+</form>";
+$password = 'password';
+if ( isset($_POST['password']) && !empty($_POST['password'])) {
+	echo 'submitted and filled.';
+}
 
 
 

@@ -100,4 +100,77 @@ if ($number === $number2) {
 	
 echo "</div><div>";	
 
+/* LOGICAL OPERATORS */
+/*
+1. Number entered
+2. Upper limit = 100
+3. Lower limit = 1
+4. Between 1 and 100
+
+We need to use OR || AND && NOT !
+*/
+
+$num = 48;
+if ($num >= 1 && $num <= 100) {
+	echo 'Number is fine.';
+} else {
+	echo 'Number must be between 1 and 100, inclusive.';
+}
+	
+echo "</div><div>";	
+
+$name = 'Joshua';
+$age = 41;
+if ( ($name == 'Joshua' || $name == 'Alex') && ($age == 25 || $age == 31) ) {
+	echo 'Hello There';
+} else {
+	echo 'Go away.';
+}
+	
+echo "</div><div>";	
+
+/* SWITCH STATEMENT */
+$num = 10;
+switch ($num) {
+	case 10:
+		echo 'Ten';
+	break; /* end of our if statement */
+	case 9:
+		echo 'Nine';
+	break; /* end of our if statement */
+	case 8:
+		echo 'Eight';
+	break; /* end of our if statement */
+	
+	default: /* similar to an else statement */
+		echo 'Number not recognised.';
+}
+	
+echo "</div><div>";	
+
+/* Arrays */
+$names = 'Alex (21), Billy (16), Dale (49)';
+echo $names;
+
+echo "</div><div>";	
+/* Key Value Pairs i.e. 'Alex' = Key and VALUE = =>21 */
+// $names = array('Alex'=>21, 'Billy'=>33, 'Dale'=>49);
+// echo $names['Dale'];
+// print_r($names);
+/* Multi-dimensional array */
+$names = array(
+	'Alex'=>array('Age'=>21, 'Hair'=>'Blonde', 'Food'=>array('Pizza', 'Pasta')), 
+	'Billy'=>array('Age'=>33, 'Hair'=>'Brown'), 
+	'Dale'=>array('Age'=>49, 'Hair'=>'Blonde')
+	);
+echo $names['Alex']['Food'][0];
+/* outputs "PIZZA" */
+
+	
+echo "</div><div>";	
+
+/* While Loop */
+
+
+
 ?>
